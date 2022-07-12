@@ -136,7 +136,7 @@ async function onMessage(message) {
     }
     // 匹配 message.text() 内容是不是 leetcode: 开头的
     if ((message.text() + '').startsWith('leetcode:')) {
-      const userSlug = message.text().split(':')[1]
+      const userSlug = message.text().split(':')[1].trim()
       yesterdayData(userSlug).then(async res => {
         let msg = `${userSlug}的刷题进度：\n\n总刷题数据：\n`
         msg += await getACQuestionsMsg(userSlug)
@@ -166,7 +166,7 @@ async function onMessage(message) {
       (message.text() + '').startsWith('查询') &&
       message.text().split('@').length > 1
     ) {
-      const userName = message.text().split('@')[1]
+      const userName = message.text().split('@')[1].trim()
       const userSlug = MEMBER_NAME_LEETCODE[userName]
       if (userSlug) {
         todayData(userSlug).then(async res => {
@@ -200,7 +200,7 @@ async function onMessage(message) {
       (message.text() + '').startsWith('昨天') &&
       message.text().split('@').length > 1
     ) {
-      const userName = message.text().split('@')[1]
+      const userName = message.text().split('@')[1].trim()
       const userSlug = MEMBER_NAME_LEETCODE[userName]
       if (userSlug) {
         yesterdayData(userSlug).then(async res => {

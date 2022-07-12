@@ -26,3 +26,5 @@
 /playland-build
 /build/
 /_build
+node_modules/*
+node_modules

@@ -30,9 +30,8 @@ const yesterdayData = async userSlug => {
     new Date().getTime() - 24 * 60 * 60 * 1000
   ).toLocaleDateString()
 
-  // recentACSubmissions 根据 titleSlug 字段去掉重复的昨天数据
   const recentACSubmissionsUnique = recentACSubmissions.reduce((acc, cur) => {
-    if (!acc.some(item => item.titleSlug === cur.titleSlug)) {
+    if (!acc.some(item => item.question.titleSlug === cur.question.titleSlug)) {
       const submitDateTime = new Date(
         cur.submitTime * 1000
       ).toLocaleDateString()
@@ -52,7 +51,7 @@ const todayData = async userSlug => {
   const today = new Date().toLocaleDateString()
 
   const recentACSubmissionsToday = recentACSubmissions.reduce((acc, cur) => {
-    if (!acc.some(item => item.titleSlug === cur.titleSlug)) {
+    if (!acc.some(item => item.question.titleSlug === cur.question.titleSlug)) {
       const submitDateTime = new Date(
         cur.submitTime * 1000
       ).toLocaleDateString()
