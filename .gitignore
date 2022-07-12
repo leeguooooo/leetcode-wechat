@@ -1,0 +1,28 @@
+.tern-port
+.tern-project
+/node_modules
+/es
+/lib
+/coverage
+*.log
+.DS_Store
+.eslintcache
+
+# Editor
+.idea
+.vscode/
+
+# src/ 组件里面 test 生成的 .spec.js.snap 文件
+/src/*/__snapshots__/
+/src/*/*/__snapshots__/
+
+# js 文件变动生成 .dev.js
+/dist
+/src/*/dist/
+/src/*/*/dist/
+
+# build docz
+.playland/dist/
+/playland-build
+/build/
+/_build

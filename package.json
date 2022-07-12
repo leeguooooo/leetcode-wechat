@@ -1,0 +1,17 @@
+{
+  "name": "leetcode-wechat",
+  "version": "1.0.0",
+  "description": "leetcode刷题进度提醒机器人",
+  "main": "index.js",
+  "author": "leeguoo",
+  "license": "MIT",
+  "dependencies": {
+    "file-box": "^1.4.15",
+    "node-schedule": "^2.1.0",
+    "wechaty": "^1.20.2",
+    "wechaty-puppet-xp": "^1.10.27"
+  },
+  "devDependencies": {
+    "zhihu-lint": "^4.7.0"
+  }
+}
